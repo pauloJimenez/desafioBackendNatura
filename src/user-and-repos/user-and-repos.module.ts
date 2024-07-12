@@ -13,10 +13,6 @@ dotenv.config();
       useValue: process.env.API_GITHUB_USER,
     },
     {
-      provide: 'API_GITHUB_REPOS',
-      useValue: process.env.API_GITHUB_REPOS,
-    },
-    {
       provide: 'BuscaUsuarioGitHub',
       useClass: ApiUserGithubRepository,
     },
