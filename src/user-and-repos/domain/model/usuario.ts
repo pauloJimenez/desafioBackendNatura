@@ -7,5 +7,5 @@ export class Usuario {
   biografia: string;
   quantidadeSeguidores: number;
   quantidadeRepositorios: number;
-  listaRepositorios: Repositorio[];  
+  listaRepositorios: Repositorio[];
 }

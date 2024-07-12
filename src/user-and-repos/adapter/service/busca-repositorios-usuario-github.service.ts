@@ -1,11 +1,13 @@
 import { Repositorio } from 'src/user-and-repos/domain/model/repositorio';
 import { ApiUsuarioRepositoriosGithubRepository } from '../repository/api-usuario-repositorios-github-repository';
 import { BuscaRepositoriosService } from 'src/user-and-repos/domain/interfaces/busca-repositorios.service';
-
+import { Inject, Injectable } from '@nestjs/common';
+@Injectable()
 export class BuscaRepositoriosDeUsuarioGithubService
   implements BuscaRepositoriosService
 {
   constructor(
+    @Inject('BuscaRepositoriosDeUsuarioGitHub')
     private readonly apiUsuarioRepositoriosGithubRepository: ApiUsuarioRepositoriosGithubRepository,
   ) {}
 

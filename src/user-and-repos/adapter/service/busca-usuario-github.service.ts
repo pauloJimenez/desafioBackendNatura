@@ -1,9 +1,11 @@
 import { Usuario } from 'src/user-and-repos/domain/model/usuario';
 import { ApiUsuarioGithubRepository } from '../repository/api-usuario-github-repository';
 import { BuscaUsuarioService } from 'src/user-and-repos/domain/interfaces/busca-usuario.service';
-
+import { Inject, Injectable } from '@nestjs/common';
+@Injectable()
 export class BuscaUsuarioGithubService implements BuscaUsuarioService {
   constructor(
+    @Inject('BuscaUsuarioGitHub')
     private readonly apiUsuarioGithubRepository: ApiUsuarioGithubRepository,
   ) {}
 
