@@ -1,6 +1,6 @@
 {
   "name": "desafio-natura-api",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Desafio API Natura",
   "author": "Paulo Jimenez",
   "private": true,
@@ -59,7 +59,7 @@
       "json",
       "ts"
     ],
-    "rootDir": "src",
+    "roots": ["src","test"],
     "testRegex": ".*\\.spec\\.ts$",
     "transform": {
       "^.+\\.(t|j)s$": "ts-jest"

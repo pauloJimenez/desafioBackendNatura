@@ -6,7 +6,7 @@ import { ApiUsuarioRepositoriosGithubRepository } from './adapter/repository/api
 import { BuscaUsuarioGithubService } from './adapter/service/busca-usuario-github.service';
 import { BuscaRepositoriosDeUsuarioGithubService } from './adapter/service/busca-repositorios-usuario-github.service';
 import { BuscaUsuarioERepositoriosService } from './domain/service/busca-usuario-repositorios.service';
-import { UsuarioERepositoriosGithubController } from './adapter/controller/usuario-Repositorios-github.controler';
+import { UsuarioERepositoriosGithubController } from './adapter/controller/usuario-repositorios-github.controler';
 dotenv.config();
 @Module({
   imports: [HttpModule],
