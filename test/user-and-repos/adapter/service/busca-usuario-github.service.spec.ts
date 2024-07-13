@@ -59,7 +59,7 @@ describe('BuscaUsuarioGithubService', () => {
     await testingModule.close();
   });
 
-  it('Deve ser chamado o ApiUsuarioGithubRepository com username válido', async () => {
+  it('Deve ser chamado a ApiUsuarioGithubRepository com username válido', async () => {
     const nomeUsuario = 'userNameTest';
     httpService.get = jest
       .fn()
