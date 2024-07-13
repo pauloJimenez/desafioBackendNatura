@@ -12,10 +12,8 @@ export class UsuarioERepositoriosGithubController {
   async buscaUsuarioERepositorios(
     @Param('nomeUsuario') nomeUsuario: string,
   ): Promise<ResponseUsuario> {
-    const response =
-      await this.buscaUsuarioERepositoriosService.buscarUsuarioERepositorios(
-        nomeUsuario,
-      );
-    return response;
+    return await this.buscaUsuarioERepositoriosService.buscarUsuarioERepositorios(
+      nomeUsuario,
+    );
   }
 }

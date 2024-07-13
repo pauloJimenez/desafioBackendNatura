@@ -12,7 +12,10 @@ export class ApiUsuarioGithubRepository {
     const response = await firstValueFrom(
       this.httpService.get(`${this.url}/${username}`).pipe(
         catchError((error: AxiosError) => {
-          throw new NotFoundException(error.response.data);
+          throw new NotFoundException(
+            'Usuário não encontrado',
+            error.response.data,
+          );
         }),
       ),
     );

@@ -13,7 +13,10 @@ export class ApiUsuarioRepositoriosGithubRepository {
     const response = await firstValueFrom(
       this.httpService.get(`${this.url}/${username}/repos`).pipe(
         catchError((error: AxiosError) => {
-          throw new NotFoundException(error.response.data);
+          throw new NotFoundException(
+            'Repositório não encontrado',
+            error.response.data,
+          );
         }),
       ),
     );
