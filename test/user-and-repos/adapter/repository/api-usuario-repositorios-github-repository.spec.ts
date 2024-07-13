@@ -2,8 +2,7 @@ import { TestingModule } from '@nestjs/testing/testing-module';
 import { Test } from '@nestjs/testing';
 import { ApiUsuarioRepositoriosGithubRepository } from '../../../../src/user-and-repos/adapter/repository/api-usuario-repositorios-github-repository';
 import { HttpService } from '@nestjs/axios';
-import { asyncScheduler, scheduled, throwError } from 'rxjs';
-import { NotFoundException } from '@nestjs/common';
+import { asyncScheduler, scheduled } from 'rxjs';
 
 describe('ApiUsuarioRepositoriosGithubRepository', () => {
   let repositorio: ApiUsuarioRepositoriosGithubRepository;
