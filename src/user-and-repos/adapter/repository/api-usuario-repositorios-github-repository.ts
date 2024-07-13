@@ -1,8 +1,6 @@
 import { HttpService } from '@nestjs/axios';
-import { Inject, Injectable, NotFoundException } from '@nestjs/common';
-import { AxiosError } from 'axios';
-import { catchError, firstValueFrom } from 'rxjs';
-
+import { Inject, Injectable } from '@nestjs/common';
+import { firstValueFrom } from 'rxjs';
 @Injectable()
 export class ApiUsuarioRepositoriosGithubRepository {
   constructor(
@@ -11,14 +9,7 @@ export class ApiUsuarioRepositoriosGithubRepository {
   ) {}
   async buscarRepositoriosDoUsuarioGithub(username: string): Promise<any> {
     const response = await firstValueFrom(
-      this.httpService.get(`${this.url}/${username}/repos`).pipe(
-        catchError((error: AxiosError) => {
-          throw new NotFoundException(
-            'Repositório não encontrado',
-            error.response.data,
-          );
-        }),
-      ),
+      this.httpService.get(`${this.url}/${username}/repos`),
     );
     return response.data;
   }
